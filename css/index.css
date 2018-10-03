@@ -1,0 +1,100 @@
+.positionbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.thing {
+  position: absolute;
+}
+
+#_1 {
+  transform: rotateZ(0);
+}
+
+.red {
+  background: red;
+}
+
+#_2 {
+  transform: rotateZ(120deg);
+}
+
+.green {
+  background: green;
+}
+
+#_3 {
+  transform: rotateZ(240deg);
+}
+
+.blue {
+  background: blue;
+}
+
+.dot {
+  /*background: red;*/
+  border-radius: 1rem; 
+  height: 1rem;
+  width: 1rem;
+
+  transform: translateY(0);
+
+  animation-name: vert;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vert {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(900%); 
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.vertbar {
+  /*background: #777;*/
+  height: 10rem;
+  width: 1rem;
+  
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+
+  transform: translate(0);
+
+  animation-name: rot;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes rot {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(720deg);
+  }
+}
+
+.rotbox {
+  /*background: #ccc;*/
+  height: 10rem;
+  width: 10rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
