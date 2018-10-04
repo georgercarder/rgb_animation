@@ -1,18 +1,21 @@
 (function(window) {
   "use strict";
-  var Trefoil = function() {  
+  var RGBAnim = function() {  
   
-   console.log("hello Trefoil");
-   this.turnOnOffBound = this.turnOnOff.bind(this);
-  
+   console.log("hello RGBAnim");
+   this.turnOnBound = this.turnOn.bind(this);
+   this.turnOffBound = this.turnOnOff.bind(this);
     //for demo
-    this.turnOnOffBound();
   };
 
-  Trefoil.prototype.turnOnOff = function() {
+  RGBAnim.prototype.turnOn = function() {
   
   };
 
-  window.Trefoil = new Trefoil;
+  RGBAnim.prototype.turnOff = function() {
+  
+  };
+
+  window.RGBAnim = new RGBAnim;
 
 })(window);
