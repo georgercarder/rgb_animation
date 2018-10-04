@@ -53,27 +53,10 @@
   height: 1rem;
   width: 1rem;
 
-  transform: translateY(0);
-
-  animation-name: vert;
-  animation-duration: 2s;
- /* animation-timing-function: linear;*/
-  animation-iteration-count: infinite;
+  transform: matrix(3.33,0,0,1,0,0);
 }
 
-@keyframes vert {
-  0% {
-    transform: translateY(0);
-  }
 
-  50% {
-    transform: translateY(900%); 
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
 
 .vertbar {
   /*background: #333;*/
@@ -84,9 +67,10 @@
   justify-content: center;
   /*align-items: center;*/
 
-  transform: translate(0);
+  transform: rotateZ(0);
 
   animation-name: horz;
+  animation-play-state: running;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -94,49 +78,24 @@
 
 @keyframes horz {
   0% {
-    transform: translateX(0);
-  }
-
-  33% {
-    transform: translateX(100%); 
-  }
-
-  66% {
-    transform: translateX(-100%); 
-  }
-  
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.horzshift {
-  /*background: #777;*/
-  height: 10rem;
-  width: 5rem;
-  
-  display: flex;
-  justify-content: center;
-  /*align-items: center;*/
-
-  transform: translate(0);
-
-  animation-name: rot;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-
-
-@keyframes rot {
-  0% {
     transform: rotateZ(0);
   }
 
   100% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(540deg);
   }
+}
+
+.horzshift {
+  height: 10rem;
+  width: 10rem;
+  
+  display: flex;
+  justify-content: center;
+
+  transform: matrix(0.3,0,0,1,0,0);
+  /*align-items: center;*/
+
 }
 
 .rotbox {
@@ -147,4 +106,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation-name: rot;
+  animation-play-state: running; 
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(180deg);
+  }
 }
